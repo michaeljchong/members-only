@@ -1,0 +1,10 @@
+Members
+  name:string
+  email:string
+  password:string
+  has_many Posts
+
+Posts
+  title:string
+  body:text
+  belongs_to member

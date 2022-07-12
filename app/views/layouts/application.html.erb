@@ -14,12 +14,11 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <nav class="navbar">
-      <%= link_to root_path, class: "navbar-item" do %>
-        <h1 class="title">The Club</h1>
-      <% end %>
-    </nav>
-    <%= yield %>
+    
+    <%= render 'home/header' %>
+    <div class="container">
+      <%= yield %>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>

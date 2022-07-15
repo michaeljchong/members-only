@@ -5,6 +5,14 @@
   </p>
 
   <p>
+    <% if user_signed_in? %>
+      <strong>Author:</strong>
+      <%= git post.user_id %>
+    <% end %>
+
+  </p>
+
+  <p>
     <strong>Content:</strong>
     <%= post.content %>
   </p>

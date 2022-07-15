@@ -8,12 +8,14 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    #@post = Post.new
+    @post = current_user.posts.build
   end
 
   # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
+    #@post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
     respond_to do |format|
       if @post.save

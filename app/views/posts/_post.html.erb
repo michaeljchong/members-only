@@ -7,7 +7,7 @@
   <p>
     <% if user_signed_in? %>
       <strong>Author:</strong>
-      <%= post.user_id %>
+      <%= post.user.name %>
     <% end %>
 
   </p>
